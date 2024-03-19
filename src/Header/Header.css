@@ -1,0 +1,21 @@
+.header
+{
+    width: 99%;
+    background-color: rgb(4, 70, 48);
+    border-radius: 15px;
+    height: 50px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.bulb
+{
+    width: 30px;
+    height: 30px;
+    padding: 10px 5px 5px 5px;
+}
+.keep
+{
+    color: azure;
+    margin-top: 8px;   
+}
