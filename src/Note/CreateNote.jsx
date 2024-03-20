@@ -34,12 +34,22 @@ const CreateNote = (props) => {
         setExpand(true);
     };
 
-    const addEvent = () => {
-        props.passNote(note);
-        setNote({title:"", content:""})
-        setExpand(false);
-    }
+    // const addEvent = () => {
+    //     props.passNote(note);
+    //     setNote({title:"", content:""})
+    //     setExpand(false);
+    // }
 
+    const addEvent = () => {
+        if (Object.values(note).some(param => param.length > 0)) {
+            props.passNote(note);
+            setNote({title:"", content:""});
+            setExpand(false);
+        } else {
+                // Handing the case of empty note
+           alert("At least one parameter of note should have a length greater than 0.");
+        }
+    }
 
     return (
         <div className="main_note">
